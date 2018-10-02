@@ -34,12 +34,13 @@
               <span aria-hidden="true">&times;</span>
             </div>
             <div class="contentMenu">
+                <a class="nav-link" onclick="logOut()" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
               <a class="nav-link" onclick="" href="#"><i class="far fa-credit-card"></i></a>
               <a class="nav-link" onclick="" href="#"><i class="fas fa-calculator"></i></a>
               <a class="nav-link" onclick="" href="#"><i class="fas fa-user-circle"></i></a>
               <a class="nav-link" onclick="" href="#"><i class="fas fa-question-circle"></i></a>
               <a class="nav-link" onclick="showMenu()" href="#"><i class="fas fa-home"></i> Home</a>
-              <a class="nav-link" onclick="logOut()" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+             
             </div>
           </nav>
         </div>
@@ -63,27 +64,6 @@
 <!-- fin seccion de login -->
 
 <!-- seccion mapas -->
-<section class="container-fluid" id="SectionMap">
-<h1>MAPA</h1>
-  <div class="ctrl-panel">
-    <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
-    <div class="form-group">
-      <label for="destination">End:</label>
-      <select id="destination" onchange="route()">
-        <option value="">Reciclaje de aceite</option>
-        <option value="Avenida Ricardo Lyon 330, santiago">Biorecicla</option>
-        <option value="Caupolicán 1151, providencia">Rendering, Providencia</option>
-        <option value="Manuel Thompson 4308, estacion central">Rendering, Estación Central</option>
-        <option value="Félix Weingardnert 1989, pedro aguirre cerda">Rendering, Pedro Aguirre Cerda</option>
-        <option value="Sierra Bella 2816, San Joaquín">Rendering, San Joaquín</option>
-      </select>
-    </div>
-    <div>
-      <p id="direccion"></p>
-    </div>
-  </div>
-  <div id="mapContainer"></div>
-</section>
 <!-- fin seccion mapas -->
 <!-- script firebase -->
 
