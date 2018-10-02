@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Enrutamiento predictivo utilizando patrones de tráfico y visualización de patrones </title>
+<meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
+<meta name=" viewport " content=" width = device-width, initial-scale = 1 ">
+<meta charset="UTF-8">
+<link rel=" stylesheet " type=" text / css " href=" https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css ">
+
+<head>
+  <title>Predictive Routing using Traffic Patterns and Pattern Display</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css">
+  <link rel="stylesheet" href="./src//css/index.css">
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
+</head>
+
+<body>
+  <div class="ctrl-panel">
+    <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
+    <div class="form-group">
+      <label for="destination">End:</label>
+      <select id="destination" onchange="route()">
+        <option value="">Reciclaje de aceite</option>
+        <option value="Avenida Ricardo Lyon 330, santiago">Biorecicla</option>
+        <option value="Caupolicán 1151, providencia">Rendering, Providencia</option>
+        <option value="Manuel Thompson 4308, estacion central">Rendering, Estación Central</option>
+        <option value="Félix Weingardnert 1989, pedro aguirre cerda">Rendering, Pedro Aguirre Cerda</option>
+        <option value="Sierra Bella 2816, San Joaquín">Rendering, San Joaquín</option>
+      </select>
+    </div>
+    <div>
+      <p id="direccion"></p>
+    </div>
+  </div>
+  <div id="mapContainer"></div>
+
+
+  <script src="./src//js/index.js"></script>
+</body>
+</html>
