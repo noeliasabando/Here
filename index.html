@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<title> Enrutamiento predictivo utilizando patrones de tráfico y visualización de patrones </title>
-<meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
-<meta name=" viewport " content=" width = device-width, initial-scale = 1 ">
-<meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
+  <title>Here</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel=" stylesheet " type=" text / css " href=" https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css ">
 
-<head>
-  <title>Predictive Routing using Traffic Patterns and Pattern Display</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css">
-  <link rel="stylesheet" href="./src//css/index.css">
+
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
@@ -19,9 +16,55 @@
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
   <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
-</head>
 
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
 <body>
+  <!-- inicio menunavbar -->
+  <header id="headerMenu">
+    <div class="pos-f-t">
+      <nav class="navbar navbar-dark barMenu">
+        <button onclick="navMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+          <nav id="side" class="nav flex-column float-left menunav  menuClosed">
+            <div onclick="navMenu()" class="close_button">
+              <span aria-hidden="true">&times;</span>
+            </div>
+            <div class="contentMenu">
+              <a class="nav-link" onclick="" href="#"><i class="far fa-credit-card"></i></a>
+              <a class="nav-link" onclick="" href="#"><i class="fas fa-calculator"></i></a>
+              <a class="nav-link" onclick="" href="#"><i class="fas fa-user-circle"></i></a>
+              <a class="nav-link" onclick="" href="#"><i class="fas fa-question-circle"></i></a>
+              <a class="nav-link" onclick="showMenu()" href="#"><i class="fas fa-home"></i> Home</a>
+              <a class="nav-link" onclick="logOut()" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- fin meni header navbar -->
+ <!-- Seccion de login -->
+ <section class="container-fluid" id="Sectionlogin">
+   <input  id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
+   <input  id="password" type="password" placeholder="contraseña">
+   <button type="button" onclick="login()" class="btn btn-primary" id="btn">Iniciar sesión</button>
+   <p class="pLogin"id="wrong"></p>
+   <p class ="pLogin">¿Olvidaste tu contraseña?</p>
+   <p class="pLogin">¿NO TIENES CUENTA?
+     <input id = "register" onClick="register()" type ="button" value="Registrar">
+    </p>
+    <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
+    <input id="loginGoogle" type="button" onclick="loginGoogle()" value="LOGIN GMAIL">
+  </section>
+
+
+<!-- fin seccion de login -->
+
+<!-- seccion mapas -->
+<section class="container-fluid" id="SectionMap">
+<h1>MAPA</h1>
   <div class="ctrl-panel">
     <span id="toggle-ctrl-panel" class="glyphicon glyphicon-menu-left"></span>
     <div class="form-group">
@@ -40,14 +83,31 @@
     </div>
   </div>
   <div id="mapContainer"></div>
+</section>
+<!-- fin seccion mapas -->
+<!-- script firebase -->
 
-
-
-
-  <script type="text /javascrip">   
-    var app_id =  "Yl3Ju4STECOUFEcGVC0a" ;
-    var app_code =  "To3xARYWWdfFlmrdJoKolw" ;
-  </script>
-  <script src="./src//js/index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDbxnYcW7ji_dL47M-EefpnDBcfkYL6GfA",
+    authDomain: "here-ec61a.firebaseapp.com",
+    databaseURL: "https://here-ec61a.firebaseio.com",
+    projectId: "here-ec61a",
+    storageBucket: "here-ec61a.appspot.com",
+    messagingSenderId: "110381083168"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- script bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- scripts -->
+<script src="./src/js/main.js"></script>
+<script src="./src/js/login.js"></script>
+<script src="./src/js/menu.js"></script>
+<script src="./src/js/index.js"></script>
 </body>
 </html>
