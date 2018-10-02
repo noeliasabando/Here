@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
+  <title>Here</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel=" stylesheet " type=" text / css " href=" https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css ">
+
+
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-pano.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-clustering.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.cit.api.here.com/v3/3.0/mapsjs-data.js"></script>
+
+  <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+  <!-- inicio menunavbar -->
+
+      <!-- fin meni header navbar -->
+ <!-- Seccion de login -->
+ <section class="container-fluid" id="Sectionlogin">
+   <input  id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
+   <input  id="password" type="password" placeholder="contraseña">
+   <button type="button" onclick="login()" class="btn btn-primary" id="btn">Iniciar sesión</button>
+   <p class="pLogin"id="wrong"></p>
+   <p class ="pLogin">¿Olvidaste tu contraseña?</p>
+   <p class="pLogin">¿NO TIENES CUENTA?
+     <input id = "register" onClick="register()" type ="button" value="Registrar">
+    </p>
+    <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
+    <input id="loginGoogle" type="button" onclick="loginGoogle()" value="LOGIN GMAIL">
+  </section>
+
+
+<!-- fin seccion de login -->
+
+<!-- seccion mapas -->
+<!-- fin seccion mapas -->
+<!-- script firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDbxnYcW7ji_dL47M-EefpnDBcfkYL6GfA",
+    authDomain: "here-ec61a.firebaseapp.com",
+    databaseURL: "https://here-ec61a.firebaseio.com",
+    projectId: "here-ec61a",
+    storageBucket: "here-ec61a.appspot.com",
+    messagingSenderId: "110381083168"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- script bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- scripts -->
+<script src="./src/js/main.js"></script>
+<script src="./src/js/login.js"></script>
+<script src="./src/js/index.js"></script>
+</body>
+</html>
