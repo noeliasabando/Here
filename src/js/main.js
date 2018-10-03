@@ -1,4 +1,4 @@
-/* window.onload = () => {
+/*  window.onload = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       document.getElementById('Sectionlogin').style.display ='none';
@@ -14,6 +14,6 @@
   //document.getElementById('btnsaldotarjeta').addEventListener('click', drawSaldo);
   //document.getElementById('btnCalculo').addEventListener('click', drawCalculate);
   //document.getElementById('SelecTarifa').addEventListener('click', drawSelect);
-}; */
-
+}; 
+ */
 
