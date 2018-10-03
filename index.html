@@ -6,6 +6,7 @@
   <meta http-equiv=" X-UA-compatible " contenido=" IE = borde " />
   <title>Here</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel=" stylesheet " type=" text / css " href=" https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css ">
 
 
@@ -20,22 +21,64 @@
   <link rel="stylesheet" href="src/css/login.css">
 </head>
 <body>
-  <!-- inicio menunavbar -->
+  <header>
+    <div class="topBox">
+      <img id="logo" src="">
+    </div>
+  </header>
+  <section class="imagenFondo">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 text-center">
+          <div id="registro">
+            <div id="msnUsuario">
+              <p></p>
+            </div>
+            <form class="formulario">
+              <div>
+                <!--Autentificación con facebook    -->
+                <input class="botonFacebook" id="facebookButton" onclick="loginFacebook()" type="button" value="Registrar con Facebook">
+                <input class="botonFacebook" id="facebookButton" onclick="loginGoogle()" type="button" value="Registrar con GMAIL">
+              </div>
+              <hr class="style1">
+              <div>
+                <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario">
+              </div>
+              <div>
+                <input class="inputRegistro" id="email" type="email" placeholder="Correo electrónico">
+              </div>
+              <div>
+                <input class="inputRegistro" id="password" type="password" placeholder="Contraseña">
+              </div>
+              <div>
+                <input class="botonRegistro" id="registerButton" onclick="register();" type="button" value="Registrarse">
+                <button type="button" onclick="login()" class="btn btn-primary" id="btnLogin">Iniciar sesión</button>
+              </div>
+                        </form>
+                        <p class="ingresarConCuenta">¿Tienes una cuenta?
+                            <a class="entrar" href="login.html">Entrar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
 
-      <!-- fin meni header navbar -->
- <!-- Seccion de login -->
- <section class="container-fluid" id="Sectionlogin">
-   <input  id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
-   <input  id="password" type="password" placeholder="contraseña">
-   <button type="button" onclick="login()" class="btn btn-primary" id="btn">Iniciar sesión</button>
-   <p class="pLogin"id="wrong"></p>
-   <p class ="pLogin">¿Olvidaste tu contraseña?</p>
-   <p class="pLogin">¿NO TIENES CUENTA?
-     <input id = "register" onClick="register()" type ="button" value="Registrar">
-    </p>
-    <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
-    <input id="loginGoogle" type="button" onclick="loginGoogle()" value="LOGIN GMAIL">
-  </section>
+<!-- Seccion de login -->
+<!--  <section class="container-fluid" id="Sectionlogin">
+   <div id="login">
+      <input  id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
+      <i class="far fa-envelope"></i>
+      <input  id="password" type="password" placeholder="contraseña">
+      <i class="fas fa-key"></i>
+      
+      <input id="btnregister" class="btn btn-primary" onClick="register()" type ="button" value="Registrar">
+       </p>
+       <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
+       <input id="loginGoogle" type="button" onclick="loginGoogle()" value="LOGIN GMAIL">
+   </div>
+   
+  </section> -->
 
 
 <!-- fin seccion de login -->
