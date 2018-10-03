@@ -8,7 +8,7 @@ function loginFacebook(){
   firebase.auth().signInWithPopup(provider)
   .then(()=> {
     console.log('login con Face');
-    window.location.href = '../../mapa.html';
+    window.location.href = '../src/html/mapa.html';
     
   })
   .catch((error)=> {
