@@ -8,7 +8,7 @@ function loginFacebook(){
   firebase.auth().signInWithPopup(provider)
   .then(()=> {
     console.log('login con Face');
-    window.location.href = './html/mapa.html';
+    window.location.href = '../src/html/mapa.html';
     
   })
   .catch((error)=> {
@@ -26,7 +26,7 @@ function loginGoogle() {
   firebase.auth().signInWithPopup(provider)
     .then(()=> {
       console.log('Login con Google');
-      window.location.href = '../html/mapa.html';
+      window.location.href = '../src/html/mapa.html';
     })
     .catch((error) => {
       console.log('Error de Firebase > ' + error.code);
@@ -56,7 +56,7 @@ const login = () => {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
   .then(() => {
     console.log('Usuario Logeado');
-    window.location.href = 'html/mapa.html';
+    window.location.href = '../src/html/mapa.html';
     
   })
   .catch(()=> {
