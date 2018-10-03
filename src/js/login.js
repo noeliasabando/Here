@@ -8,6 +8,7 @@ function loginFacebook(){
   firebase.auth().signInWithPopup(provider)
   .then(()=> {
     console.log('login con Face');
+    window.location.href = '/src/vista2.html';
     
   })
   .catch((error)=> {
@@ -25,6 +26,7 @@ function loginGoogle() {
   firebase.auth().signInWithPopup(provider)
     .then(()=> {
       console.log('Login con Google');
+      window.location.href = '/src/vista2.html';
     })
     .catch((error) => {
       console.log('Error de Firebase > ' + error.code);
@@ -40,6 +42,7 @@ const register = () => {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
   .then(() => {
     console.log('usuario registrado');
+    window.location.href = '/src/vista2.html';
   })
   .catch((error) => {
     console.log('Error firebase>' + error.code);
@@ -53,6 +56,7 @@ const login = () => {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
   .then(() => {
     console.log('Usuario Logeado');
+    window.location.href = '/src/vista2.html';
     
   })
   .catch(()=> {
@@ -65,6 +69,7 @@ const logOut = () => {
   firebase.auth().signOut()
   .then(() => {
     console.log('Usuario deslogeado');
+    window.location.href = 'login.html';
   })
   .catch();
 };
