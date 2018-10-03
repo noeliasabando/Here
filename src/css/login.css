@@ -1,0 +1,28 @@
+body{
+  background-image: url(/assets/img/water-3711257_1920.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#login{
+  background-color:rgba(255, 255, 255, 0.5);
+  margin:5px;
+  text-align: center;
+  margin-top: 82px;
+  border: none;
+  border-radius: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#email, #password{
+  background-color:rgba(255, 255, 255, 0.04);
+  border: none;
+  border-bottom: solid;
+  margin-top: 10px;
+  color: rgba(76, 76, 76);
+}
+
+#btnLogin, #btnregister {
+  margin-top: 15px;
+}
