@@ -56,7 +56,7 @@ const login = () => {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
   .then(() => {
     console.log('Usuario Logeado');
-    window.location.href = '../src/html/mapa.html';
+    window.location.href = 'html/mapa.html';
     
   })
   .catch(()=> {
