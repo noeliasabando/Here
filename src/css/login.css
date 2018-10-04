@@ -114,10 +114,10 @@ hr.style1 {
   margin-bottom: 10px;
   width: 255px;
   height: 36px;
-  background-color: rgb(251,229,120);
+  background-color:rgb(17, 166, 247,0.8);
   border-radius: 6px;
   border: none;
-  color: black;
+  color: rgb(247, 243, 232);
   font-size: 14px;
   font-weight: 600;
 }
