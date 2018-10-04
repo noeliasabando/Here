@@ -55,7 +55,7 @@
 }
 
 .imagenFondo {
-  background-image: url(/assets/img/pexels-photo-355288.jpeg);
+  background-image: url(../../assets/img/pexels-photo-355288.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
