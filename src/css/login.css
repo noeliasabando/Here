@@ -1,4 +1,4 @@
-body{
+/* body{
   background-image: url(/assets/img/water-3711257_1920.jpg);
   background-position: center center;
   background-attachment: fixed;
@@ -23,6 +23,148 @@ body{
   color: rgba(76, 76, 76);
 }
 
-#btnLogin, #btnregister {
-  margin-top: 15px;
+ */
+
+ body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.topBox {
+  /*background-color:rgba(255, 255, 255, 0.3);*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  z-index: 100;
+  /* z-index es el orden de capas */
+}
+
+.formulario {
+  padding-top: 10px;
+  background-color:rgba(255, 255, 255, 0.3);
+}
+
+#logo {
+  width: 220px;
+  height: 75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.imagenFondo {
+  background-image: url(/assets/img/pexels-photo-355288.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.inputRegistro {
+  margin-bottom: 10px;
+  width: 255px;
+  height: 36px;
+  border: 1px solid #9B9B9B;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: black;
+  font-size: 14px;
+  padding-left: 10px;
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #9B9B9B;
+  text-align: left;
+}
+
+.botonFacebook {
+  margin-bottom: 0px;
+  width: 255px;
+  height: 36px;
+  background-color: #3B5998;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.botonGoogle{
+  margin-bottom: 0px;
+  width: 255px;
+  height: 36px;
+  background-color: #FF0000;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+hr.style1 {
+  border-top: 1px solid #9B9B9B;
+  width: 255px;
+}
+
+.botonRegistro, .botonLogin {
+  margin-bottom: 10px;
+  width: 255px;
+  height: 36px;
+  background-color: rgb(251,229,120);
+  border-radius: 6px;
+  border: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ingresarConCuenta {
+  font-size: 14px;
+  color: #4A4A4A;
+  font-weight: 400;
+  margin-top: 60px;
+}
+
+.entrar {
+  font-size: 14px;
+  color: #00ADA7;
+  font-weight: 700;
+}
+
+a:link {
+  color: #00ADA7;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00ADA7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ADA7;
+  text-decoration: none;
+}
+
+a:active {
+  color: #00ADA7;
+  text-decoration: none;
+}
+
+#msnUsuario {
+  padding-top: 155px;
+  color: #4A4A4A;
+  font-size: 10px;
+}
+
+.error {
+  padding: 5px;
+  border: 1px solid #DD3C10;
+  box-sizing: border-box;
+  background-color: #FFEBE8;
+  box-shadow: none;
 }
