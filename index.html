@@ -36,14 +36,15 @@
             </div>
             <form class="formulario">
               <div>
-                <!--Autentificación con facebook    -->
-                <input class="botonFacebook" id="facebookButton" onclick="loginFacebook()" type="button" value="Registrar con Facebook">
-                <input class="botonFacebook" id="facebookButton" onclick="loginGoogle()" type="button" value="Registrar con GMAIL">
+                <!--Autentificación con facebook-->
+                <button class="botonFacebook" id="facebookButton" onclick="loginFacebook()" type="button">
+                  Registrar con Facebook
+                </button>
+              </div>
+              <div>
+                <input class="botonGoogle" id="facebookButton" onclick="loginGoogle()" type="button" value="Registrar con Gmail">
               </div>
               <hr class="style1">
-              <div>
-                <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario">
-              </div>
               <div>
                 <input class="inputRegistro" id="email" type="email" placeholder="Correo electrónico">
               </div>
@@ -51,40 +52,17 @@
                 <input class="inputRegistro" id="password" type="password" placeholder="Contraseña">
               </div>
               <div>
-                <input class="botonRegistro" id="registerButton" onclick="register();" type="button" value="Registrarse">
-                <button type="button" onclick="login()" class="btn btn-primary" id="btnLogin">Iniciar sesión</button>
+                <button type="button" onclick="login()" class="botonLogin" id="btnLogin">Iniciar Sesión</button>
               </div>
-                        </form>
-                        <p class="ingresarConCuenta">¿Tienes una cuenta?
-                            <a class="entrar" href="login.html">Entrar</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+              <div>
+                <input class="botonRegistro" id="registerButton" onclick="register();" type="button" value="Registrarse">
+              </div>
+            </form>
+          </div>
         </div>
-      </section>
-
-<!-- Seccion de login -->
-<!--  <section class="container-fluid" id="Sectionlogin">
-   <div id="login">
-      <input  id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
-      <i class="far fa-envelope"></i>
-      <input  id="password" type="password" placeholder="contraseña">
-      <i class="fas fa-key"></i>
-      
-      <input id="btnregister" class="btn btn-primary" onClick="register()" type ="button" value="Registrar">
-       </p>
-       <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
-       <input id="loginGoogle" type="button" onclick="loginGoogle()" value="LOGIN GMAIL">
-   </div>
-   
-  </section> -->
-
-
-<!-- fin seccion de login -->
-
-<!-- seccion mapas -->
-<!-- fin seccion mapas -->
+      </div>
+    </div>
+  </section>
 <!-- script firebase -->
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
