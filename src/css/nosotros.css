@@ -91,9 +91,15 @@ a:active {
 }
 
 #mision{
-  margin-top: 50px;
+  margin-top: 30px;
+  text-align: justify;
 }
 
 #vision{
-  margin-top: 50px;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.subtitulo{
+  margin-top: 70px;
 }
