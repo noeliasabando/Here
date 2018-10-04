@@ -1,5 +1,9 @@
+body{
+  background-color: #FFF4C9;
+}
+
 .navbar {
-  background-color: #e2c5bd;
+  background-color: #FBE578;
 }
 
 .navbar .navbar-brand {
@@ -86,5 +90,35 @@ a:active {
   text-decoration: none;
 }
 
+.titulo{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
+.link{
+ font-size: 30px;
+}
+
+#img1{
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+#img2{
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+#img3{
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
 

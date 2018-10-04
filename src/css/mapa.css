@@ -8,6 +8,10 @@ body {
   position: absolute;
 }
 
+.body{
+  background-color: #FFF4C9;
+}
+
 #mapContainer {
   height: 70%;
   margin-top: 20px;  
@@ -25,7 +29,7 @@ body {
 }
 
 .navbar {
-  background-color: #e2c5bd;
+  background-color: #FBE578;
 }
 
 .navbar .navbar-brand {
