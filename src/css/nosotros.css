@@ -103,3 +103,15 @@ a:active {
 .subtitulo{
   margin-top: 70px;
 }
+
+#imgyo{
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#imgleslie{
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
